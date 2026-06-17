@@ -24,6 +24,7 @@
       <nav class="main-nav" aria-label="Seleccione una sección">
         <a href="#nosotros">Nosotros</a>
         <a href="#servicios">Servicios</a>
+        <a href="#hospedaje">Hospedaje</a>
         <a href="#equipos">Equipos</a>
         <a href="#wireline">Wireline</a>
         <a href="#contacto">Cotizar</a>
@@ -123,41 +124,99 @@
       <section id="servicios" class="section services-section">
         <div class="section-head">
           <p class="eyebrow">Nuestros servicios</p>
-          <h2>Soluciones integrales para pozos, perforación y operaciones de campo</h2>
+          <h2>Dos lineas de servicio, una sola operacion bajo control</h2>
+          <p>Cubrimos toda la operacion en campo con dos grandes lineas. En la linea petrolera ofrecemos well service y workover, well construction con taladros de perforacion, wireline de guaya fina y electrica, coiled tubing, procura y logistica pesada. Y en hospedaje y oficinas moviles brindamos dormitorios, comedores y catering, lavanderia y modulos de oficina en contenedor. Elija un tipo para ver sus servicios.</p>
         </div>
-        <div class="service-grid">
-          <article class="service-card large-card">
-            <img src="assets/cabillero-002.jpg" alt="Cabillero NOV 550 HP" />
-            <div>
-              <span>Well service</span>
-              <h3>Cabilleros y workover</h3>
-              <p>Equipos cabilleros NOV y Taylor de 550 HP, workover Serviking 775 HP y soporte para intervención y mantenimiento de pozos.</p>
-            </div>
-          </article>
-          <article class="service-card">
-            <img src="assets/drilling-1500.jpg" alt="Taladro de perforación 1500 HP" />
-            <div>
-              <span>Well construction</span>
-              <h3>Taladro de perforación 1500 HP PTV 010</h3>
-              <p>Capacidad para operaciones de perforación con infraestructura técnica y sistemas de control para proyectos exigentes.</p>
-            </div>
-          </article>
-          <article class="service-card">
-            <img src="assets/guaya-electrica.jpg" alt="Guaya eléctrica" />
-            <div>
-              <span>Wireline</span>
-              <h3>Guaya fina y guaya eléctrica</h3>
-              <p>Evaluación de pozos, diagnóstico de problemas, perfiles de producción e inyección, Gas Lift, CBL, VDL, Caliper, Gamma Ray, CCL, PLT e ILT.</p>
-            </div>
-          </article>
-          <article class="service-card">
-            <img src="assets/truck-yellow.jpg" alt="Logística pesada" />
-            <div>
-              <span>Procurement service</span>
-              <h3>Procura y logística pesada</h3>
-              <p>Suministro, transporte y apoyo logístico para mantener equipos, herramientas y operaciones en movimiento.</p>
-            </div>
-          </article>
+
+        <div class="svc-tabs" role="tablist" aria-label="Tipos de servicio">
+          <button class="svc-tab" type="button" role="tab" data-tab="petroleros" aria-selected="true">
+            <span class="tab-kicker">Linea tecnica</span>
+            <span class="tab-title">Servicios Petroleros</span>
+            <span class="tab-sub">Well service, perforacion, wireline, coiled tubing, procura</span>
+          </button>
+          <button class="svc-tab" id="hospedaje" type="button" role="tab" data-tab="hospedaje" aria-selected="false">
+            <span class="tab-kicker">Soporte en campo</span>
+            <span class="tab-title">Hospedaje y Oficinas Moviles</span>
+            <span class="tab-sub">Dormitorios, comedor, catering, lavanderia y oficinas</span>
+          </button>
+        </div>
+
+        <div class="svc-panel is-active" data-panel="petroleros" role="tabpanel">
+          <div class="service-grid">
+            <article class="service-card large-card">
+              <img src="assets/cabillero-002.jpg" alt="Cabillero NOV 550 HP" />
+              <div>
+                <span>Well service</span>
+                <h3>Cabilleros y workover</h3>
+                <p>Equipos cabilleros NOV y Taylor de 550 HP, workover Serviking 775 HP y soporte para intervencion y mantenimiento de pozos.</p>
+              </div>
+            </article>
+            <article class="service-card">
+              <img src="assets/drilling-1500.jpg" alt="Taladro de perforación 1500 HP" />
+              <div>
+                <span>Well construction</span>
+                <h3>Taladro de perforacion 1500 HP PTV 010</h3>
+                <p>Capacidad para operaciones de perforacion con infraestructura tecnica y sistemas de control para proyectos exigentes.</p>
+              </div>
+            </article>
+            <article class="service-card">
+              <img src="assets/guaya-electrica.jpg" alt="Guaya eléctrica" />
+              <div>
+                <span>Wireline</span>
+                <h3>Guaya fina y guaya electrica</h3>
+                <p>Evaluacion de pozos, diagnostico de problemas, perfiles de produccion e inyeccion, Gas Lift, CBL, VDL, Caliper, Gamma Ray, CCL, PLT e ILT.</p>
+              </div>
+            </article>
+            <article class="service-card">
+              <img src="assets/truck-yellow.jpg" alt="Logística pesada" />
+              <div>
+                <span>Procurement service</span>
+                <h3>Procura y logistica pesada</h3>
+                <p>Suministro, transporte y apoyo logistico para mantener equipos, herramientas y operaciones en movimiento.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="svc-panel" data-panel="hospedaje" role="tabpanel">
+          <div class="category-grid">
+            <a class="category-card" href="dormitorios.html">
+              <img src="assets/productos/dormitorio-obrero-interior.png" alt="Dormitorios moviles" />
+              <div class="cat-overlay">
+                <span>Alojamiento</span>
+                <h3>Dormitorios</h3>
+                <p>Personal obrero y tecnico, literas, camas y banos.</p>
+                <span class="cat-go">Ver productos</span>
+              </div>
+            </a>
+            <a class="category-card" href="comedor.html">
+              <img src="assets/productos/comedor-interior.png" alt="Comedor y catering" />
+              <div class="cat-overlay">
+                <span>Alimentacion</span>
+                <h3>Comedor y Catering</h3>
+                <p>Comedores industriales, cocina y servicio de catering.</p>
+                <span class="cat-go">Ver productos</span>
+              </div>
+            </a>
+            <a class="category-card" href="lavanderia.html">
+              <img src="assets/productos/lavanderia-interior.png" alt="Lavanderia movil" />
+              <div class="cat-overlay">
+                <span>Servicio</span>
+                <h3>Lavanderia Movil</h3>
+                <p>Lavado, secado y doblado de uniformes en campo.</p>
+                <span class="cat-go">Ver productos</span>
+              </div>
+            </a>
+            <a class="category-card" href="oficinas.html">
+              <img src="assets/productos/oficina-interior.png" alt="Oficinas moviles" />
+              <div class="cat-overlay">
+                <span>Espacios</span>
+                <h3>Oficinas</h3>
+                <p>Modulos de oficina y soporte logistico equipados.</p>
+                <span class="cat-go">Ver productos</span>
+              </div>
+            </a>
+          </div>
         </div>
       </section>
 
