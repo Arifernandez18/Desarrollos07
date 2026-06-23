@@ -18,6 +18,32 @@ nextButton?.addEventListener('click', () => showSlide(currentSlide + 1));
 
 showSlide(0);
 
+/* ---- envio de cotizacion por WhatsApp ---- */
+(function () {
+  var quoteForm = document.querySelector('.quote-form');
+  if (!quoteForm) return;
+
+  quoteForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    var data = new FormData(quoteForm);
+    var details = String(data.get('mensaje') || '').trim();
+    var lines = [
+      'Solicitud de cotizacion desde la web',
+      '',
+      'Nombre: ' + String(data.get('nombre') || '').trim(),
+      'Telefono: ' + String(data.get('telefono') || '').trim(),
+      'Servicio: ' + String(data.get('servicio') || '').trim()
+    ];
+
+    if (details) lines.push('Detalles: ' + details);
+
+    var phone = quoteForm.dataset.whatsapp || '584120598209';
+    var url = 'https://wa.me/' + phone + '?text=' + encodeURIComponent(lines.join('\n'));
+    window.open(url, '_blank', 'noopener');
+  });
+})();
+
 
 /* ---- scroll reveal animations ---- */
 (function () {
